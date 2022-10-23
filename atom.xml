@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>DeltaLimit&#39;s Blog</title>
+  
+  
+  <link href="http://deltalimit.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://deltalimit.github.io/"/>
+  <updated>2022-10-23T15:03:07.332Z</updated>
+  <id>http://deltalimit.github.io/</id>
+  
+  <author>
+    <name>DeltaLimit</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何给Git加代理?</title>
+    <link href="http://deltalimit.github.io/2022/10/23/%E5%A6%82%E4%BD%95%E7%BB%99Git%E5%8A%A0%E4%BB%A3%E7%90%86/"/>
+    <id>http://deltalimit.github.io/2022/10/23/%E5%A6%82%E4%BD%95%E7%BB%99Git%E5%8A%A0%E4%BB%A3%E7%90%86/</id>
+    <published>2022-10-23T14:29:16.000Z</published>
+    <updated>2022-10-23T15:03:07.332Z</updated>
+    
+    <content type="html"><![CDATA[<p>大家都知道, v2ray在使用过程中, 是没办法代理Git的. 那么现在, 我们就要让Git加上代理, 来访问GitHub啦!<br /><em><strong>注意: 本文的代理软件是v2ray, Clash请将端口设置为7890!</strong></em></p><h2 id="socks"><a class="markdownIt-Anchor" href="#socks"></a> SOCKS</h2><pre><code class="hljs txt">git config --global http.proxy socks5://127.0.0.1:10808git config --global https.proxy socks5://127.0.0.1:10808</code></pre><h2 id="https"><a class="markdownIt-Anchor" href="#https"></a> HTTPS</h2><pre><code class="hljs txt">git config --global http.proxy http://127.0.0.1:10809git config --global https.proxy https://127.0.0.1:10809</code></pre><h3 id="配置好后-我们的git就可以享受高速clone的快感辣-但是这个方法是暂时的-如何让它持久化呢-别急-往下看"><a class="markdownIt-Anchor" href="#配置好后-我们的git就可以享受高速clone的快感辣-但是这个方法是暂时的-如何让它持久化呢-别急-往下看"></a> 配置好后, 我们的Git就可以享受高速clone的快感辣! 但是这个方法是暂时的, 如何让它持久化呢? 别急, 往下看</h3><h2 id="修改gitconfig文件"><a class="markdownIt-Anchor" href="#修改gitconfig文件"></a> 修改.gitconfig文件</h2><h3 id="windows下的路径在-cuseryournamegitconfig"><a class="markdownIt-Anchor" href="#windows下的路径在-cuseryournamegitconfig"></a> Windows下的路径在 C:/User/YourName/.gitconfig</h3><h3 id="linux直接在bash输入-vi-~gitconfig"><a class="markdownIt-Anchor" href="#linux直接在bash输入-vi-~gitconfig"></a> Linux直接在bash输入 <code>vi ~/.gitconfig</code></h3><h3 id="macos在bash输入-git-config-global-e"><a class="markdownIt-Anchor" href="#macos在bash输入-git-config-global-e"></a> macOS在bash输入 <code>git config --global -e</code></h3><p><strong>新建或修改以下配置:</strong></p><pre><code class="hljs txt">[http]proxy = http://127.0.0.1:10809[https]proxy = http://127.0.0.1:10809</code></pre><h3 id="然后-你的git代理就持久化辣~-别忘了在clone的时候启动你的代理哦~"><a class="markdownIt-Anchor" href="#然后-你的git代理就持久化辣~-别忘了在clone的时候启动你的代理哦~"></a> 然后, 你的Git代理就持久化辣~ 别忘了在clone的时候启动你的代理哦~</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;大家都知道, v2ray在使用过程中, 是没办法代理Git的. 那么现在, 我们就要让Git加上代理, 来访问GitHub啦!&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;注意: 本文的代理软件是v2ray, Clash请将端口设置为7890!&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="Git" scheme="http://deltalimit.github.io/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于国内如何安装GoLang以及GoLang的IDE推荐</title>
+    <link href="http://deltalimit.github.io/2022/10/23/%E5%85%B3%E4%BA%8E%E5%9B%BD%E5%86%85%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85GoLang%E4%BB%A5%E5%8F%8AGoLang%E7%9A%84IDE%E6%8E%A8%E8%8D%90/"/>
+    <id>http://deltalimit.github.io/2022/10/23/%E5%85%B3%E4%BA%8E%E5%9B%BD%E5%86%85%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85GoLang%E4%BB%A5%E5%8F%8AGoLang%E7%9A%84IDE%E6%8E%A8%E8%8D%90/</id>
+    <published>2022-10-23T10:33:08.000Z</published>
+    <updated>2022-10-23T11:44:07.325Z</updated>
+    
+    <content type="html"><![CDATA[<p>大家好! 我是DeltaLimit. 这是我的第一篇博客，旨在引导大家准备好学习GoLang前的准备。一起来看看吧!</p><h2 id="golang二进制文件下载"><a class="markdownIt-Anchor" href="#golang二进制文件下载"></a> GoLang二进制文件下载</h2><h3 id="1从官网httpsgodevdl-下载"><a class="markdownIt-Anchor" href="#1从官网httpsgodevdl-下载"></a> 1.从官网(<a href="https://go.dev/dl/">https://go.dev/dl/</a>) 下载</h3><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://s2.loli.net/2022/10/23/M1ouZsWz2APqVBv.png" alt="download_official.png" data-caption="download_official.png" loading="lazy"></p><h3 id="2从国内镜像httpsgolanggooglecndl-下载"><a class="markdownIt-Anchor" href="#2从国内镜像httpsgolanggooglecndl-下载"></a> 2.从国内镜像(<a href="https://golang.google.cn/dl/">https://golang.google.cn/dl/</a>) 下载</h3><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://s2.loli.net/2022/10/23/aWOpCZQsD7yz2j5.png" alt="download_cnmirror.png" data-caption="download_cnmirror.png" loading="lazy"></p><h4 id="对于windows用户"><a class="markdownIt-Anchor" href="#对于windows用户"></a> 对于Windows用户:</h4><p>下载对应的 <em><strong>Microsoft Windows</strong></em> 版本</p><h4 id="对于macos用户"><a class="markdownIt-Anchor" href="#对于macos用户"></a> 对于macOS用户:</h4><p>下载对应的 <em><strong>Apple macOS</strong></em> 版本 <strong>(注意: Apple M系列芯片需要下载ARM64版本, Intel芯片则需要下载x86-64版本)</strong></p><h4 id="对于linux用户"><a class="markdownIt-Anchor" href="#对于linux用户"></a> 对于Linux用户:</h4><p>首先下载安装包:</p><pre><code class="hljs shell">sudo wget https://golang.org/dl/go1.19.2.linux-amd64.tar.gz</code></pre><p>下载好安装包后, 解压</p><pre><code class="hljs shell">sudo tar -xvf go1.19.2.linux-amd64.tar.gz</code></pre><p>解压后，生成一个go目录.</p><p>用命令行mv将该目录移到/usr/local下.</p><pre><code class="hljs shell">sudo mv go /usr/local</code></pre><p>然后, 进入环境变量配置</p><pre><code class="hljs shell">cd /etcsudo gedit profile</code></pre><p>在你的profile文件中加入这几行:</p><pre><code class="hljs txt">export PATH=$PATH:/usr/local/go/binexport GOPATH=你的go工作空间目录export PATH=$PATH:$GOPATH/bin</code></pre><p>然后输入:</p><pre><code class="hljs txt">source ~/.profile</code></pre><p>最后, 在bash里打出 <em><strong>go version</strong></em> 查看是否安装成功!</p><h2 id="golang-ide推荐"><a class="markdownIt-Anchor" href="#golang-ide推荐"></a> GoLang IDE推荐</h2><h3 id="1-jetbrains-goland-收费"><a class="markdownIt-Anchor" href="#1-jetbrains-goland-收费"></a> 1. Jetbrains GoLand (收费)</h3><p>为什么我会推荐这个IDE？<br />Jetbrains家的产品, 几乎每个程序员都知道吧（笑<br />高度智能化, 代码补全, 舒服的页面… 让人流连忘返<br />虽然GoLand收费, 但是这并不影响大佬们, 具体方法请自行百度.</p><h3 id="2-microsoft-visual-studio-code-免费"><a class="markdownIt-Anchor" href="#2-microsoft-visual-studio-code-免费"></a> 2. Microsoft Visual Studio Code (免费)</h3><p>我承认, 把VSCode排在第二位, 有点个人因素.<br />我实在是用不惯Microsoft家的IDE, 但这并不妨碍VSCode是一个好的IDE.</p><h3 id="3-vim-免费"><a class="markdownIt-Anchor" href="#3-vim-免费"></a> 3. Vim (免费)</h3><p>Vim, 神话的编辑器<br />不仅可以编辑普通的TXT文档, 还可以写代码, 就是需要记住的快捷键多。<br />博主没尝试过Vim, 有兴趣的小伙伴可以自己试试</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;大家好! 我是DeltaLimit. 这是我的第一篇博客，旨在引导大家准备好学习GoLang前的准备。一起来看看吧!&lt;/p&gt;
+&lt;h2 id=&quot;golang二进制文件下载&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#golang二进制文件下载&quot;&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="GoLang" scheme="http://deltalimit.github.io/tags/GoLang/"/>
+    
+  </entry>
+  
+</feed>
