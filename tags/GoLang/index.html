@@ -3,6 +3,12 @@
 <html lang="en">
 
 <head>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+    <script>
+        $(document).pjax('a[target!=_blank]', '#container', {fragment:'#container', timeout:8000})
+    </script>
+    
     
     <title>Tags：GoLang - DeltaLimit&#39;s Blog</title>
     <meta charset="UTF-8">
@@ -22,13 +28,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1666620558051">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1666623004319">
     
-    <link rel="stylesheet" href="/css/style.css?v=1666620558051">
+    <link rel="stylesheet" href="/css/style.css?v=1666623004319">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1666620558051">
+            <link rel="stylesheet" href="/custom.css?v=1666623004319">
         
     
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="DeltaLimit's Blog" type="application/atom+xml">
@@ -325,9 +331,26 @@
 
  
 
-<script async src="/js/app.js?v=1666620558054"></script>
+<script async src="/js/app.js?v=1666623004321"></script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+
+<!-- 引用Aplayer和metingjs -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script>
+<div id="my-aplayer"
+	class="aplayer" 
+	data-id="1824454154" 
+	data-server="netease" 
+	data-type="song" 
+	data-fixed="true"
+	data-autoplay="true" 
+	data-order="list" 
+	data-volume="0.55" 
+	data-theme="#cc543a" 
+	data-preload="auto" 
+></div>
 
 </body>
 
